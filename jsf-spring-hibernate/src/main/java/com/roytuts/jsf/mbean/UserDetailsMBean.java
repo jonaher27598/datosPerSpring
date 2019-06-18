@@ -19,9 +19,19 @@ public class UserDetailsMBean implements Serializable {
         //inject spring bean via DI
 	@ManagedProperty("#{userDetailsService}")
 	private UserDetailsService userDetailsService;
+	private UserDetails entity = new UserDetails();
 
 	private UserDetails userDetails;
 	private List<UserDetails> userDetailsList;
+	
+	public String save() {
+		if (entity.getId() != 0) {
+			userDetailsService.update(entity).setId(entity.getId());
+		} else {
+			userDetailsService.save(entity);
+		}
+		return "guardo";
+	}
 
 	public UserDetails getUserDetails() {
 		if (userDetails == null) {

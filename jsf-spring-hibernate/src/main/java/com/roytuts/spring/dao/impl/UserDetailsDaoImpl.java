@@ -13,6 +13,33 @@ public class UserDetailsDaoImpl implements UserDetailsDao {
 
     @Autowired
     private SessionFactory sessionFactory;
+    @Transactional
+    @Override
+    public UserDetails create(UserDetails userDetails) {
+        if(userDetails.getId()==0)
+        	sessionFactory.getCurrentSession().save(userDetails);
+        else
+        	return null;
+        return userDetails;
+    }
+    
+    @Transactional
+    @Override
+    public UserDetails update(UserDetails userDetails) {
+    	if(userDetails!=null) {
+    		sessionFactory.getCurrentSession().update(userDetails);
+    	}
+    	else {
+    		return null;
+    	}
+    	return userDetails;
+    }
+    
+    @Override
+    @Transactional
+    public void destroy(UserDetails userDetails) {
+    	sessionFactory.getCurrentSession().delete(userDetails);
+    }
 
     @Transactional
     @Override

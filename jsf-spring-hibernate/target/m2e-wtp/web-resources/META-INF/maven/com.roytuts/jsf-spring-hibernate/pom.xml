@@ -10,7 +10,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<spring.version>4.1.6.RELEASE</spring.version>
+		<version>5.1.8.RELEASE</version>
 		<jsf2.version>2.2.10</jsf2.version>
 		<hibernate.version>4.3.8.Final</hibernate.version>
 		<mysqlconnector.version>5.1.46</mysqlconnector.version>
@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>4.1.6.RELEASE</version>
+			<version>5.1.8.RELEASE</version>
 		</dependency>
 
 
@@ -29,7 +29,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>4.1.6.RELEASE</version>
+			<version>5.1.8.RELEASE</version>
 		</dependency>
 
 
@@ -37,7 +37,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>4.1.6.RELEASE</version>
+			<version>5.1.8.RELEASE</version>
 		</dependency>
 
 
